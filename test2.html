@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BamBam Profile Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.css">
+    <style>
+        .hidden-input {
+            display: none;
+        }
+
+        .form-check-input {
+    border: 2px solid #000; /* Use your preferred dark color code */
+}
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Bambam Job Application Form</h1>
+        <div class="container mt-5">
+        
+            <p> <strong> Instructions: </strong>Please complete all sections of the application. All applications must be submitted in English. Only applications made on the official application form or on our official website will be considered. We encourage you to read the job description carefully before you start the process</p>
+            
+           
+            
+           
+            <table class="table">
+                <tr>
+                    <td><strong> Position Applied For: </strong></td>
+                    <td>
+                        <label><input type="radio" name="position" value="careWorker"> Care Worker</label><br>
+                        <label><input type="radio" name="position" value="healthcareWorker"> Healthcare Worker</label><br>
+                        <label><input type="radio" name="position" value="supportWorker"> Support Worker</label><br>
+                        <label><input type="radio" name="position" value="domesticStaff"> Domestic Staff</label><br>
+                        <label><input type="radio" name="position" value="nursing"> Nursing</label><br>
+                        <label><input type="radio" name="position" value="others"> Others</label>
+                    </td>
+                </tr>
+                <tr class="hidden-input" id="pinSpecialtyTable">
+                    <td id="pinSpecialtyLabel">If Nurse, please specify PIN Number and Specialty:</td>
+                    <td>
+                        <div class="form-group">
+                            <label for="surname">PIN No:</label>
+                            <input type="text" class="form-control" id="surname" name="surname">
+                        </div>
+                        <div class="form-group">
+                            <label for="surname">Specialty:</label>
+                            <input type="text" class="form-control" id="surname" name="surname">
+                        </div>
+                        
+                    </td>
+                </tr>
+                <tr class="hidden-input" id="OthersTable">
+                    <td id="OthersTableLabel">If Others, please specify:</td>
+                    <td>
+                        <div class="form-group">
+                     
+                            <input type="text" class="form-control" style="display: inline-block; width: auto;" placeholder="Enter Others">
+                        </div>
+                      </td>
+                </tr>
+            </table>
+        </div>
+
+
+
+
+        <div class="accordion" id="profileAccordion">
+
+            <!-- Personal Details Section -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="personalDetailsHeading">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#personalDetailsCollapse" aria-expanded="true" aria-controls="personalDetailsCollapse">
+                    <h5>Personal Details</h5>
+                    </button>
+                </h2>
+                <div id="personalDetailsCollapse" class="accordion-collapse collapse show" aria-labelledby="personalDetailsHeading" data-bs-parent="#profileAccordion">
+                    <div class="accordion-body">
+                        <!-- Personal details form fields -->
+                        <div class="container mt-5">
+                            <div class="form-group">
+                                <label for="title">Title (Mrs, Mr, Ms etc):</label>
+                              
+                                <table class="table">
+                                    <tr>
+                                        <td>   <select class="form-control" id="title" name="title">
+                                            <option value="Mr">Mr</option>
+                                            <option value="Mrs">Mrs</option>                                            
+                                            <option value="Ms">Ms</option>
+                                            <option value="Others">Others</option>
+                                            <!-- Add more options as needed -->
+                                        </select>
+                                    </td>
+                                        <td>            
+                            <div class="form-group" id="otherTitleGroup" style="display: none;">
+                                 
+                                <input type="text" class="form-control" id="otherTitle" placeholder="Please Specify  Others here (e.g Dr(Miss))"  name="other_title" disabled>
+                          
+                        </td>
+                            </div>
+                        </td>
+                                 </tr>
+                                                                
+                                </table>
+
+                            </div>
+                                            
+                            <div class="form-group">
+                                <label for="surname">Surname:</label>
+                                <input type="text" class="form-control" id="surname" name="surname">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="firstName">First Name:</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName">
+                            </div>
+                            <div class="form-group">
+                                <label for="otherName">Other Name:</label>
+                                <input type="text" class="form-control" id="otherName" name="otherName">
+                            </div>
+                            <div class="form-group">
+                                <label for="dob">D.O.B:</label>
+                                <input type="date" class="form-control" id="dob" name="dob">
+                            </div>
+                            <div class="form-group">
+                                <label for="nationality">Nationality:</label>
+                                <select class="form-control" id="nationality" name="nationality">
+                                    <option value="specify" selected >Please specify your country</option>
+                                 <option value="Afghanistan">Afghanistan</option>
+                                 <option value="Albania">Albania</option>
+                                <option value="Algeria">Algeria</option>
+                                <option value="American Samoa">American Samoa</option>
+                                <option value="Andorra">Andorra</option>
+                                <option value="Angola">Angola</option>
+                                <option value="Anguilla">Anguilla</option>
+                                <option value="Antartica">Antarctica</option>
+                                <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                                <option value="Argentina">Argentina</option>
+                                <option value="Armenia">Armenia</option>
+                                <option value="Aruba">Aruba</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Austria">Austria</option>
+                                <option value="Azerbaijan">Azerbaijan</option>
+                                <option value="Bahamas">Bahamas</option>
+                                <option value="Bahrain">Bahrain</option>
+                                <option value="Bangladesh">Bangladesh</option>
+                                <option value="Barbados">Barbados</option>
+                                <option value="Belarus">Belarus</option>
+                                <option value="Belgium">Belgium</option>
+                                <option value="Belize">Belize</option>
+                                <option value="Benin">Benin</option>
+                                <option value="Bermuda">Bermuda</option>
+                                <option value="Bhutan">Bhutan</option>
+                                <option value="Bolivia">Bolivia</option>
+                                <option value="Bosnia and Herzegowina">Bosnia and Herzegowina</option>
+                                <option value="Botswana">Botswana</option>
+                                <option value="Bouvet Island">Bouvet Island</option>
+                                <option value="Brazil">Brazil</option>
+                                <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                                <option value="Brunei Darussalam">Brunei Darussalam</option>
+                                <option value="Bulgaria">Bulgaria</option>
+                                <option value="Burkina Faso">Burkina Faso</option>
+                                <option value="Burundi">Burundi</option>
+                                <option value="Cambodia">Cambodia</option>
+                                <option value="Cameroon">Cameroon</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Cape Verde">Cape Verde</option>
+                                <option value="Cayman Islands">Cayman Islands</option>
+                                <option value="Central African Republic">Central African Republic</option>
+                                <option value="Chad">Chad</option>
+                                <option value="Chile">Chile</option>
+                                <option value="China">China</option>
+                                <option value="Christmas Island">Christmas Island</option>
+                                <option value="Cocos Islands">Cocos (Keeling) Islands</option>
+                                <option value="Colombia">Colombia</option>
+                                <option value="Comoros">Comoros</option>
+                                <option value="Congo">Congo</option>
+                                <option value="Congo">Congo, the Democratic Republic of the</option>
+                                <option value="Cook Islands">Cook Islands</option>
+                                <option value="Costa Rica">Costa Rica</option>
+                                <option value="Cota D'Ivoire">Cote d'Ivoire</option>
+                                <option value="Croatia">Croatia (Hrvatska)</option>
+                                <option value="Cuba">Cuba</option>
+                                <option value="Cyprus">Cyprus</option>
+                                <option value="Czech Republic">Czech Republic</option>
+                                <option value="Denmark">Denmark</option>
+                                <option value="Djibouti">Djibouti</option>
+                                <option value="Dominica">Dominica</option>
+                                <option value="Dominican Republic">Dominican Republic</option>
+                                <option value="East Timor">East Timor</option>
+                                <option value="Ecuador">Ecuador</option>
+                                <option value="Egypt">Egypt</option>
+                                <option value="El Salvador">El Salvador</option>
+                                <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                <option value="Eritrea">Eritrea</option>
+                                <option value="Estonia">Estonia</option>
+                                <option value="Ethiopia">Ethiopia</option>
+                                <option value="Falkland Islands">Falkland Islands (Malvinas)</option>
+                                <option value="Faroe Islands">Faroe Islands</option>
+                                <option value="Fiji">Fiji</option>
+                                <option value="Finland">Finland</option>
+                                <option value="France">France</option>
+                                <option value="France Metropolitan">France, Metropolitan</option>
+                                <option value="French Guiana">French Guiana</option>
+                                <option value="French Polynesia">French Polynesia</option>
+                                <option value="French Southern Territories">French Southern Territories</option>
+                                <option value="Gabon">Gabon</option>
+                                <option value="Gambia">Gambia</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Ghana">Ghana</option>
+                                <option value="Gibraltar">Gibraltar</option>
+                                <option value="Greece">Greece</option>
+                                <option value="Greenland">Greenland</option>
+                                <option value="Grenada">Grenada</option>
+                                <option value="Guadeloupe">Guadeloupe</option>
+                                <option value="Guam">Guam</option>
+                                <option value="Guatemala">Guatemala</option>
+                                <option value="Guinea">Guinea</option>
+                                <option value="Guinea-Bissau">Guinea-Bissau</option>
+                                <option value="Guyana">Guyana</option>
+                                <option value="Haiti">Haiti</option>
+                                <option value="Heard and McDonald Islands">Heard and Mc Donald Islands</option>
+                                <option value="Holy See">Holy See (Vatican City State)</option>
+                                <option value="Honduras">Honduras</option>
+                                <option value="Hong Kong">Hong Kong</option>
+                                <option value="Hungary">Hungary</option>
+                                <option value="Iceland">Iceland</option>
+                                <option value="India">India</option>
+                                <option value="Indonesia">Indonesia</option>
+                                <option value="Iran">Iran (Islamic Republic of)</option>
+                                <option value="Iraq">Iraq</option>
+                                <option value="Ireland">Ireland</option>
+                                <option value="Israel">Israel</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Jamaica">Jamaica</option>
+                                <option value="Japan">Japan</option>
+                                <option value="Jordan">Jordan</option>
+                                <option value="Kazakhstan">Kazakhstan</option>
+                                <option value="Kenya">Kenya</option>
+                                <option value="Kiribati">Kiribati</option>
+                                <option value="Democratic People's Republic of Korea">Korea, Democratic People's Republic of</option>
+                                <option value="Korea">Korea, Republic of</option>
+                                <option value="Kuwait">Kuwait</option>
+                                <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                <option value="Lao">Lao People's Democratic Republic</option>
+                                <option value="Latvia">Latvia</option>
+                               <option value="Lebanon" >Lebanon</option>
+                                <option value="Lesotho">Lesotho</option>
+                                <option value="Liberia">Liberia</option>
+                                <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                                <option value="Liechtenstein">Liechtenstein</option>
+                                <option value="Lithuania">Lithuania</option>
+                                <option value="Luxembourg">Luxembourg</option>
+                                <option value="Macau">Macau</option>
+                                <option value="Macedonia">Macedonia, The Former Yugoslav Republic of</option>
+                                <option value="Madagascar">Madagascar</option>
+                                <option value="Malawi">Malawi</option>
+                                <option value="Malaysia">Malaysia</option>
+                                <option value="Maldives">Maldives</option>
+                                <option value="Mali">Mali</option>
+                                <option value="Malta">Malta</option>
+                                <option value="Marshall Islands">Marshall Islands</option>
+                                <option value="Martinique">Martinique</option>
+                                <option value="Mauritania">Mauritania</option>
+                                <option value="Mauritius">Mauritius</option>
+                                <option value="Mayotte">Mayotte</option>
+                                <option value="Mexico">Mexico</option>
+                                <option value="Micronesia">Micronesia, Federated States of</option>
+                                <option value="Moldova">Moldova, Republic of</option>
+                                <option value="Monaco">Monaco</option>
+                                <option value="Mongolia">Mongolia</option>
+                                <option value="Montserrat">Montserrat</option>
+                                <option value="Morocco">Morocco</option>
+                                <option value="Mozambique">Mozambique</option>
+                                <option value="Myanmar">Myanmar</option>
+                                <option value="Namibia">Namibia</option>
+                                <option value="Nauru">Nauru</option>
+                                <option value="Nepal">Nepal</option>
+                                <option value="Netherlands">Netherlands</option>
+                                <option value="Netherlands Antilles">Netherlands Antilles</option>
+                                <option value="New Caledonia">New Caledonia</option>
+                                <option value="New Zealand">New Zealand</option>
+                                <option value="Nicaragua">Nicaragua</option>
+                                <option value="Niger">Niger</option>
+                                <option value="Nigeria">Nigeria</option>
+                                <option value="Niue">Niue</option>
+                                <option value="Norfolk Island">Norfolk Island</option>
+                                <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                <option value="Norway">Norway</option>
+                                <option value="Oman">Oman</option>
+                                <option value="Pakistan">Pakistan</option>
+                                <option value="Palau">Palau</option>
+                                <option value="Panama">Panama</option>
+                                <option value="Papua New Guinea">Papua New Guinea</option>
+                                <option value="Paraguay">Paraguay</option>
+                                <option value="Peru">Peru</option>
+                                <option value="Philippines">Philippines</option>
+                                <option value="Pitcairn">Pitcairn</option>
+                                <option value="Poland">Poland</option>
+                                <option value="Portugal">Portugal</option>
+                                <option value="Puerto Rico">Puerto Rico</option>
+                                <option value="Qatar">Qatar</option>
+                                <option value="Reunion">Reunion</option>
+                                <option value="Romania">Romania</option>
+                                <option value="Russia">Russian Federation</option>
+                                <option value="Rwanda">Rwanda</option>
+                                <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option> 
+                                <option value="Saint LUCIA">Saint LUCIA</option>
+                                <option value="Saint Vincent">Saint Vincent and the Grenadines</option>
+                                <option value="Samoa">Samoa</option>
+                                <option value="San Marino">San Marino</option>
+                                <option value="Sao Tome and Principe">Sao Tome and Principe</option> 
+                                <option value="Saudi Arabia">Saudi Arabia</option>
+                                <option value="Senegal">Senegal</option>
+                                <option value="Seychelles">Seychelles</option>
+                                <option value="Sierra">Sierra Leone</option>
+                                <option value="Singapore">Singapore</option>
+                                <option value="Slovakia">Slovakia (Slovak Republic)</option>
+                                <option value="Slovenia">Slovenia</option>
+                                <option value="Solomon Islands">Solomon Islands</option>
+                                <option value="Somalia">Somalia</option>
+                                <option value="South Africa">South Africa</option>
+                                <option value="South Georgia">South Georgia and the South Sandwich Islands</option>
+                                <option value="Span">Spain</option>
+                                <option value="SriLanka">Sri Lanka</option>
+                                <option value="St. Helena">St. Helena</option>
+                                <option value="St. Pierre and Miguelon">St. Pierre and Miquelon</option>
+                                <option value="Sudan">Sudan</option>
+                                <option value="Suriname">Suriname</option>
+                                <option value="Svalbard">Svalbard and Jan Mayen Islands</option>
+                                <option value="Swaziland">Swaziland</option>
+                                <option value="Sweden">Sweden</option>
+                                <option value="Switzerland">Switzerland</option>
+                                <option value="Syria">Syrian Arab Republic</option>
+                                <option value="Taiwan">Taiwan, Province of China</option>
+                                <option value="Tajikistan">Tajikistan</option>
+                                <option value="Tanzania">Tanzania, United Republic of</option>
+                                <option value="Thailand">Thailand</option>
+                                <option value="Togo">Togo</option>
+                                <option value="Tokelau">Tokelau</option>
+                                <option value="Tonga">Tonga</option>
+                                <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                                <option value="Tunisia">Tunisia</option>
+                                <option value="Turkey">Turkey</option>
+                                <option value="Turkmenistan">Turkmenistan</option>
+                                <option value="Turks and Caicos">Turks and Caicos Islands</option>
+                                <option value="Tuvalu">Tuvalu</option>
+                                <option value="Uganda">Uganda</option>
+                                <option value="Ukraine">Ukraine</option>
+                                <option value="United Arab Emirates">United Arab Emirates</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="United States">United States</option>
+                                <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                                <option value="Uruguay">Uruguay</option>
+                                <option value="Uzbekistan">Uzbekistan</option>
+                                <option value="Vanuatu">Vanuatu</option>
+                                <option value="Venezuela">Venezuela</option>
+                                <option value="Vietnam">Viet Nam</option>
+                                <option value="Virgin Islands (British)">Virgin Islands (British)</option>
+                                <option value="Virgin Islands (U.S)">Virgin Islands (U.S.)</option>
+                                <option value="Wallis and Futana Islands">Wallis and Futuna Islands</option>
+                                <option value="Western Sahara">Western Sahara</option>
+                                <option value="Yemen">Yemen</option>
+                                <option value="Serbia">Serbia</option>
+                                <option value="Zambia">Zambia</option>
+                                <option value="Zimbabwe">Zimbabwe</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group" id="otherNationalityGroup" style="display: none;">
+                            <label for="otherNationality">Please specify your nationality:</label>
+                            <input type="text" class="form-control" id="otherNationality" name="other_nationality">
+                        </div>
+                        
+                       
+                
+                            <div class="form-group">
+                                <label for="address">Address:</label>
+                                <textarea class="form-control" id="address" name="address" rows="4"></textarea>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="postcode">Postcode:</label>
+                                <input type="text" class="form-control" id="postcode" name="postcode">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="telephoneDaytime">Telephone (Daytime/Work):</label>
+                                <input type="tel" class="form-control" id="telephoneDaytime" name="telephoneDaytime">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="telephoneMobile">Telephone (Mobile):</label>
+                                <input type="tel" class="form-control" id="telephoneMobile" name="telephoneMobile">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="telephoneEvening">Telephone (Evening):</label>
+                                <input type="tel" class="form-control" id="telephoneEvening" name="telephoneEvening">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="email">Email Address:</label>
+                                <input type="email" class="form-control" id="email" name="email">
+                            </div>
+                        </div>
+                          
+                          
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="employmentHistoryHeading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#employmentHistoryCollapse" aria-expanded="false" aria-controls="employmentHistoryCollapse">
+                        <h5>Employment History</h5>
+                    </button>
+                </h2>
+                <div id="employmentHistoryCollapse" class="accordion-collapse collapse" aria-labelledby="employmentHistoryHeading" data-bs-parent="#profileAccordion">
+                    <div class="accordion-body">
+                        <div id="employments">
+                            <div class="employment">
+                                <div class="employment-item mb-3">
+                                    <table class="table">
+                                        <tr>
+                                            <td colspan="2"><strong>Present/most recent employment:</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><em>Please provide details of your current or most recent employment. If you are not currently in employment please account for this in the section below.</em></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Employer's Name and Address:</td>
+                                            <td><input type="text" class="form-control" name="employerNameAddress"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Salary/Voluntary</td>
+                                            <td>
+                                                <input type="text" class="form-control" name="salary" id="salaryInput">
+                                                <label><input type="checkbox" class="disable-salary-checkbox"> Voluntary</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Job Title:</td>
+                                            <td><input type="text" class="form-control" name="jobTitle"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Main Responsibilities:</td>
+                                            <td><textarea class="form-control" name="mainResponsibilities" rows="4"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Start Date:</td>
+                                            <td><input type="date" class="form-control" name="startDate"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>End Date:</td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input currently-working-checkbox" id="currentlyWorkingEmployment1">
+                                                    <label class="form-check-label" for="currentlyWorkingEmployment1">Currently Working</label>
+                                                </div>
+                                                <input type="date" class="form-control" name="endDate" id="endDateInputEmployment1">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Reasons for Leaving:</td>
+                                            <td><input type="text" class="form-control" name="reasonsForLeaving"></td>
+                                        </tr>
+                                    </table>
+                                    <button type="button" class="btn btn-danger remove-employment">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary mb-3" id="add-employment">Add More</button>
+                    </div>
+                </div>
+            </div>
+           
+            
+            
+
+            <!-- Education History Section -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="educationHistoryHeading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#educationHistoryCollapse" aria-expanded="false" aria-controls="educationHistoryCollapse">
+                        <h5>Education History</h5>
+                    </button>
+                </h2>
+                <div id="educationHistoryCollapse" class="accordion-collapse collapse" aria-labelledby="educationHistoryHeading" data-bs-parent="#profileAccordion">
+                    <div class="accordion-body">
+                        <div id="educations">
+                            <div class="education">
+                                <div class="education-item mb-3">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Education</th>
+                                                <th>From</th>
+                                                <th>To</th>
+                                                <th>Qualification</th>
+                                                <th>Grade</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="text" class="form-control" name="establishment1"></td>
+                                                <td><input type="date" class="form-control" name="fromDate1"></td>
+                                                <td><input type="date" class="form-control" name="toDate1"></td>
+                                                <td><input type="text" class="form-control" name="qualification1"></td>
+                                                <td><input type="text" class="form-control" name="grade1"></td>
+                                            </tr>
+                                            <!-- Add more rows as needed -->
+                                        </tbody>
+                                    </table>
+                                    <button type="button" class="btn btn-danger remove-education">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary mb-3" id="add-education">Add More</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="certificationHistoryHeading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#certificationHistoryCollapse" aria-expanded="false" aria-controls="certificationHistoryCollapse">
+                        <h5>Certification</h5>
+                    </button>
+                </h2>
+                <div id="certificationHistoryCollapse" class="accordion-collapse collapse" aria-labelledby="certificationHistoryHeading" data-bs-parent="#profileAccordion">
+                    <div class="accordion-body">
+                        <div id="certifications">
+                            <div class="certification">
+                                <div class="certification-item mb-3">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Certification</th>
+                                                <th>Year</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="text" class="form-control" name="certifications"></td>
+                                                <td><input type="date" class="form-control" name="certificationYear"></td>
+                                            </tr>
+                                            <!-- Add more rows as needed -->
+                                        </tbody>
+                                    </table>
+                                    <button type="button" class="btn btn-danger remove-certification">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary mb-3" id="add-certification">Add More</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="skillsTrainingHeading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#skillsTrainingCollapse" aria-expanded="false" aria-controls="skillsTrainingCollapse">
+                        <h5>Skills and Training</h5>
+                    </button>
+                </h2>
+                <div id="skillsTrainingCollapse" class="accordion-collapse collapse" aria-labelledby="skillsTrainingHeading" data-bs-parent="#profileAccordion">
+                    <div class="accordion-body">
+                        <form>
+                            <table class="table">
+                                <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="firstAid" name="first_aid">
+                                            <label class="form-check-label" for="firstAid">First Aid</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="medication" name="medication">
+                                            <label class="form-check-label" for="medication">Medication</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="infectionControl" name="infection_control">
+                                            <label class="form-check-label" for="infectionControl">Infection Control</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="personCentredPlanning" name="person_centred_planning">
+                                            <label class="form-check-label" for="personCentredPlanning">Person Centred Planning</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="movingHandlingPeople" name="moving_handling_people">
+                                            <label class="form-check-label" for="movingHandlingPeople">Moving and Handling People</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="challengingBehaviour" name="challenging_behaviour">
+                                            <label class="form-check-label" for="challengingBehaviour">Challenging Behaviour</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="safeguardingAdults" name="safeguarding_adults">
+                                            <label class="form-check-label" for="safeguardingAdults">Safeguarding Adults</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="safeguardingChildren" name="safeguarding_children">
+                                            <label class="form-check-label" for="safeguardingChildren">Safeguarding Children</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="foodHygiene" name="food_hygiene">
+                                            <label class="form-check-label" for="foodHygiene">Food Hygiene</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="mentalHealth" name="mental_health">
+                                            <label class="form-check-label" for="mentalHealth">Mental Health</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="autism" name="autism">
+                                            <label class="form-check-label" for="autism">Autism</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="nutrition" name="nutrition_">
+                                            <label class="form-check-label" for="nutrition">Nutrition</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="dataProtection" name="data_protection">
+                                            <label class="form-check-label" for="dataProtection">Data Protection</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="disabilityAwareness" name="disability_awareness">
+                                            <label class="form-check-label" for="disabilityAwareness">Disability Awareness</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="healthAndSafety" name="health_and_safety">
+                                            <label class="form-check-label" for="healthAndSafety">Health and Safety</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="loneWorking" name="lone_working">
+                                            <label class="form-check-label" for="loneWorking">Lone Working</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="mentalCapacity" name="mental_capacity">
+                                            <label class="form-check-label" for="mentalCapacity">Mental Capacity</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="level2Diploma" name="level2_diploma">
+                                            <label class="form-check-label" for="level2Diploma">Level 2 Diploma</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="level3Diploma" name="level3_diploma">
+                                            <label class="form-check-label" for="level3Diploma">Level 3 Diploma</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="level5OrAbove" name="level5_or_above">
+                                            <label class="form-check-label" for="level5OrAbove">Level 5 or Above</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="others_courses_checkbox" name="others_courses_checkbox">
+                                            <label class="form-check-label" for="othersCoursesCheckbox">Others Courses</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <div class="form-group" id="others_courses_textarea_group" style="display: none;">
+                                            <label for="othersCoursesTextarea">Please specify (others):</label>
+                                            <textarea class="form-control" id="others_courses_textarea" name="others_courses_textarea" rows="3" disabled></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                            
+                            <!-- Add submit button or other form elements if needed -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+
+
+                  <!--Criminal Case Law-->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="SupportingHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#SupportingCollapse" aria-expanded="false" aria-controls="SupportingCollapse">
+                            <h5>    Supporting Information </h2>
+                        </button>
+                    </h2>
+                    <div id="SupportingCollapse" class="accordion-collapse collapse" aria-labelledby="SupportingHeading" data-bs-parent="#profileAccordion">
+                        <div class="accordion-body">
+                            <div class="mb-3">
+                                <label class="form-label">    <div class="container mt-5">
+                                    
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="supportingInfo">Use this section to tell us more about your knowledge, skills and experience that you have gained from paid work, voluntary experience and /or home life that is relevant to this post. Please ensure that you give clear examples of how your skills and experience meet each criteria of the person specification. (Continue on a separate sheet if required).</label>
+                                            <textarea class="form-control" id="supportingInfo" name="supportingInfo" rows="8"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                            
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="righttoworkinukheader">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#righttoworkinukCollapse" aria-expanded="false" aria-controls="righttoworkinukCollapse">
+                            <h5>Right to work in UK</h5>
+                        </button>
+                    </h2>
+                    <div id="righttoworkinukCollapse" class="accordion-collapse collapse" aria-labelledby="righttoworkinukheader" data-bs-parent="#profileAccordion">
+                        <div class="accordion-body">
+                            <form>
+                                <table class="table">
+                                    <tr>
+                                        <td>In line with the Immigration, Asylum and Nationality Act 2006, it is a criminal offence to employ an individual who does not have permission to work in the UK. Therefore, all offers of employment are made subject to the production of relevant documentary evidence.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" name="requirePermit" id="requirePermit">
+                                                <label class="form-check-label" for="requirePermit">Do you have the right to work in the UK?</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" name="provideEvidence" id="provideEvidence">
+                                                <label class="form-check-label" for="provideEvidence">I can provide evidence</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="DrivingHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#DrivingCollapse" aria-expanded="false" aria-controls="DrivingCollapse">
+                            <h5>Driving License</h5>
+                        </button>
+                    </h2>
+                    <div id="DrivingCollapse" class="accordion-collapse collapse" aria-labelledby="DrivingHeading" data-bs-parent="#profileAccordion">
+                        <div class="accordion-body">
+                            <form>
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" name="holdDrivingLicence" id="holdDrivingLicence">
+                                                <label class="form-check-label" for="holdDrivingLicence">Do you hold a UK driving licence?</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                            <!--Criminal Case Law-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="CriminalHeading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CriminalsCollapse" aria-expanded="false" aria-controls="CriminalsCollapse">
+                        <h5>Criminal Record</h2>
+                    </button>
+                </h2>
+                <div id="CriminalsCollapse" class="accordion-collapse collapse" aria-labelledby="CriminalHeading" data-bs-parent="#profileAccordion">
+                    <div class="accordion-body">
+                        <div class="mb-3">
+                            <label class="form-label">
+                                <h6>
+                                    Rehabilitation of Offenders Act 1974
+                                </h6>
+                                <p>
+                                   This post is exempt from the above act and therefore applicants need to disclose information about any previous convictions.  If your application is successful and it is subsequently found that convictions have not been disclosed, you may be liable to immediate dismissal or alternative disciplinary actions.
+                                    
+                                </p>
+                            </label>
+                        </div>
+                       <!--  <div class="mb-3">
+                            <label for="rehabilitationDesc" class="form-label">Rehabilitation Description</label>
+                            <textarea class="form-control" id="rehabilitationDesc" name="rehabilitation_desc" rows="3" required></textarea>
+                        </div> -->
+              
+                        <!--      Rehab -->
+                        <div class="mb-3">
+                            <label for="rehab" class="form-label">
+                                <input type="checkbox" class="form-check-input" name="rehab_j" id="rehab">
+                                Do you have any criminal convictions?                                
+                                
+                            </label>
+                        </div>
+                              <div class="mb-3" id="rehabDescDiv" style="display: none;">
+                                <p>If YES, please supply further information below </p>
+                                <p><strong>  Note: </strong>Information will remain confidential and will only be used in conjunction with your application.</p>
+                 
+                            <label for="rehabDesc" class="form-label"><strong> Rehabilitation description</strong></label>
+                            <textarea type="text" row=3 class="form-control" id="rehabDesc" name="rehab_desc"></textarea>
+                        </div>
+                        <br>
+                      
+                        <br>
+
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="refereesHeading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#refereesCollapse" aria-controls="refereesCollapse">
+                        <h5>References</h5>
+                    </button>
+                </h2>
+                <div id="refereesCollapse" class="accordion-collapse collapse" aria-labelledby="refereesHeading" data-bs-parent="#profileAccordion">
+                    <div class="accordion-body">
+                        <p>
+                            Please give the name and contact details of two referees. One should be your present/most recent employer. We will only contact referees after a job offer is made.
+                        </p>
+                        <form>
+                            <table class="table">
+                                <tr>
+                                    <td>Name:</td>
+                                    <td><input type="text" class="form-control" name="refereeName1"></td>
+                                    <td>Name:</td>
+                                    <td><input type="text" class="form-control" name="refereeName2"></td>
+                                </tr>
+                                <tr>
+                                    <td>Position:</td>
+                                    <td><input type="text" class="form-control" name="refereePosition1"></td>
+                                    <td>Position:</td>
+                                    <td><input type="text" class="form-control" name="refereePosition2"></td>
+                                </tr>
+                                <tr>
+                                    <td>Address:</td>
+                                    <td><input type="text" class="form-control" name="refereeAddress1"></td>
+                                    <td>Address:</td>
+                                    <td><input type="text" class="form-control" name="refereeAddress2"></td>
+                                </tr>
+                                <tr>
+                                    <td>Postcode:</td>
+                                    <td><input type="text" class="form-control" name="refereePostcode1"></td>
+                                    <td>Postcode:</td>
+                                    <td><input type="text" class="form-control" name="refereePostcode2"></td>
+                                </tr>
+                                <tr>
+                                    <td>Telephone:</td>
+                                    <td><input type="tel" class="form-control" name="refereeTelephone1"></td>
+                                    <td>Telephone:</td>
+                                    <td><input type="tel" class="form-control" name="refereeTelephone2"></td>
+                                </tr>
+                                <tr>
+                                    <td>Email:</td>
+                                    <td><input type="email" class="form-control" name="refereeEmail1"></td>
+                                    <td>Email:</td>
+                                    <td><input type="email" class="form-control" name="refereeEmail2"></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="confidentialityHeading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#confidentialityCollapse" aria-expanded="false" aria-controls="confidentialityCollapse">
+                        <h5>Attestation</h5>
+                    </button>
+                </h2>
+                <div id="confidentialityCollapse" class="accordion-collapse collapse" aria-labelledby="confidentialityHeading" data-bs-parent="#profileAccordion">
+                    <div class="accordion-body">
+                        <form>
+                            <div class="form-check" >
+                                <input class="form-check-input" type="checkbox" id="certification_checkbox" name="certification_checkbox" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px;">
+                                <label class="form-check-label" for="certification_checkbox">
+                                   <p>I certify that the information I have provided in this application is correct to the best of my knowledge. I understand that any misrepresentation or material omission may lead to the termination of my appointment or to dismissal. I understand this also applies to any other information or document requested by BBHC for the purpose of my recruitment and to any future contract. In connection with this application.</p> 
+                                </label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="signature">Signature:</label>
+                                <input type="file" class="form-control" id="signature" name="signature">
+                            </div>
+                            <div class="mb-3">
+                                <label for="name">Name:</label>
+                                <input type="text" class="form-control" id="name" name="name">
+                            </div>
+                           
+                        
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <button type="submit" class="btn btn-success mt-3">Submit</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.js"></script>
+    <script>
+        const salaryInput = document.getElementById('salaryInput');
+        const disableSalaryCheckbox = document.getElementById('disableSalaryCheckbox');
+
+        disableSalaryCheckbox.addEventListener('change', function() {
+            salaryInput.disabled = this.checked;
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#others_courses_checkbox").on("change", function () {
+                if ($(this).is(":checked")) {
+                    $("#others_courses_textarea_group").show();
+                    $("#others_courses_textarea").prop("disabled", false);
+                } else {
+                    $("#others_courses_textarea_group").hide();
+                    $("#others_courses_textarea").prop("disabled", true);
+                }
+            });
+        });
+    </script>
+  
+
+  <script>
+    $(document).ready(function () {
+        $('#supportingInfo').summernote({
+                height: 300, // Set the height of the editor
+                toolbar: [
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['insert', ['link']]
+                ]
+            });
+        // Add certification functionality
+        $("#add-certification").on("click", function () {
+            const newCertification = $(".certification").first().clone();
+            newCertification.find("input").val("");
+            newCertification.find("button").text("Remove");
+            newCertification.find("button").addClass("remove-certification");
+            $("#certifications").append(newCertification);
+        });
+
+        // Remove certification functionality
+        $("#certifications").on("click", ".remove-certification", function () {
+            if ($(".certification").length > 1) {
+                $(this).closest(".certification").remove();
+            }
+        });
+        $("#add-education").on("click", function () {
+            const newEducation = $(".education").first().clone();
+            newEducation.find("input").val("");
+            newEducation.find("textarea").val("");
+            newEducation.find("button").text("Remove");
+            newEducation.find("button").addClass("remove-education");
+            $("#educations").append(newEducation);
+        });
+
+        // Remove education functionality
+        $("#educations").on("click", ".remove-education", function () {
+            if ($(".education").length > 1) {
+                $(this).closest(".education").remove();
+            }
+        });
+
+        // Checkbox and input fields interaction
+        $("#otherJob").on("change", function () {
+            if ($(this).is(":checked")) {
+                $("#jobDescDiv").show();
+            } else {
+                $("#jobDescDiv").hide();
+            }
+        });
+
+        $("#rehab").on("change", function () {
+            if ($(this).is(":checked")) {
+                $("#rehabDescDiv").show();
+            } else {
+                $("#rehabDescDiv").hide();
+            }
+        });
+
+        // Adding and removing education history
+        $("#add-employment").on("click", function () {
+            const newEmployment = $(".employment").first().clone();
+            newEmployment.find("input").val("");
+            newEmployment.find("textarea").val("");
+            newEmployment.find("button").text("Remove");
+            newEmployment.find("button").addClass("remove-employment");
+            $("#employments").append(newEmployment);
+        });
+
+        // Remove employment functionality
+        $("#employments").on("click", ".remove-employment", function () {
+            if ($(".employment").length > 1) {
+                $(this).closest(".employment").remove();
+            }
+        });
+
+        // Handling current working checkbox
+        $("#currentWorkingCheck").on("change", function () {
+            if ($(this).is(":checked")) {
+                $("#endDateInput").prop("disabled", true);
+            } else {
+                $("#endDateInput").prop("disabled", false);
+            }
+        });
+
+        // Radio button interaction
+        $("input[type='radio']").on("click", function() {
+            if ($(this).val() === "nursing") {
+                $("#pinSpecialtyLabel").text("If Nurse, please specify PIN Number and Specialty:");
+                $("#pinSpecialtyTable").removeClass("hidden-input");
+                $("#OthersTable").addClass("hidden-input");
+            } else if ($(this).val() === "others") {
+                $("#OthersTableLabel").text("If Others, please specify:");
+                $("#pinSpecialtyTable").addClass("hidden-input");
+                $("#OthersTable").removeClass("hidden-input");
+            } else {
+                $("#pinSpecialtyTable").addClass("hidden-input");
+                $("#OthersTable").addClass("hidden-input");
+            }
+        });
+    });
+</script>
+ 
+<script>
+    $(document).ready(function() {
+        var employmentCounter = 1;
+
+        // Add more employment rows
+        $('#add-employment').on('click', function() {
+            employmentCounter++;
+            var employmentRow = $('.employment-item:first').clone();
+            employmentRow.find('.form-control').val('');
+            employmentRow.find('.disable-salary-checkbox').prop('checked', false);
+            employmentRow.find('.form-control[name="endDate"]').prop('disabled', false);
+            employmentRow.find('.currently-working-checkbox').prop('checked', false);
+            employmentRow.find('.form-control[name="endDate"]').prop('disabled', false);
+            employmentRow.find('.disable-salary-checkbox').attr('id', 'disableSalaryCheckbox' + employmentCounter);
+            employmentRow.find('.currently-working-checkbox').attr('id', 'currentlyWorkingEmployment' + employmentCounter);
+            employmentRow.find('.form-control[name="endDate"]').attr('id', 'endDateInputEmployment' + employmentCounter);
+            $('#employments').append(employmentRow);
+        });
+
+        // Remove employment row
+        $(document).on('click', '.remove-employment', function() {
+            if ($('.employment-item').length > 1) {
+                $(this).closest('.employment-item').remove();
+            }
+        });
+
+        // Disable "End Date" when "Currently Working" checkbox is checked
+        $(document).on('change', '.currently-working-checkbox', function() {
+            var employmentId = $(this).attr('id').replace('currentlyWorkingEmployment', '');
+            var endDateInput = $('#endDateInputEmployment' + employmentId);
+            if ($(this).is(':checked')) {
+                endDateInput.prop('disabled', true);
+            } else {
+                endDateInput.prop('disabled', false);
+            }
+        });
+    });
+</script>
+
+
+<script>
+    // Enable or disable the text box based on selected option
+    document.getElementById('title').addEventListener('change', function() {
+        var otherTitleGroup = document.getElementById('otherTitleGroup');
+        var otherTitleInput = document.getElementById('otherTitle');
+        
+        if (this.value === 'Others') {
+            otherTitleGroup.style.display = 'block';
+            otherTitleInput.disabled = false;
+        } else {
+            otherTitleGroup.style.display = 'none';
+            otherTitleInput.disabled = true;
+        }
+    });
+</script>
+
+<script>
+    const nationalitySelect = document.getElementById('nationality');
+    const otherNationalityGroup = document.getElementById('otherNationalityGroup');
+    const otherNationalityInput = document.getElementById('otherNationality');
+
+    nationalitySelect.addEventListener('change', function() {
+        if (nationalitySelect.value === 'Other') {
+            otherNationalityGroup.style.display = 'block';
+            otherNationalityInput.setAttribute('required', 'required');
+        } else {
+            otherNationalityGroup.style.display = 'none';
+            otherNationalityInput.removeAttribute('required');
+        }
+    });
+</script>
+</body>
+</html>
